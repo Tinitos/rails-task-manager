@@ -1,0 +1,17 @@
+<h1>Show page</h1>
+
+
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<% if @task.completed == true %>
+  <p> Task completed </p>
+  <% else %>
+  <p>Task uncompleted</p>
+  <% end %>
+
+
+<%= link_to "See all the tasks", tasks_path %>
+<%= link_to "Edit this task", edit_task_path(@task) %>
+<%= link_to "Delete", task_path(@task), method: :delete %>
+
+
